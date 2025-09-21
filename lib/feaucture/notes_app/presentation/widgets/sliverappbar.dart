@@ -1,11 +1,13 @@
+import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/enitites/not_entity.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/contents/contents.dart';
 import '../pages/home.dart';
 
 class Sliverappbar extends StatelessWidget {
   Sliverappbar({super.key});
-  Home home = Home();
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+  // final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+  String? value;
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -22,16 +24,33 @@ class Sliverappbar extends StatelessWidget {
             builder: (context) {
               return Row(
                 children: [
-                  Icon(Icons.more_vert),
+                  PopupMenuButton(
+                    enabled: true,
+                    onSelected: (String value) {
+                      value = value;
+                    },
+
+                    itemBuilder: (context) {
+                      return popupMenuButton_Items
+                          .map(
+                            (String choice) => PopupMenuItem(
+                              value: choice,
+                              child: Text('$choice'),
+                            ),
+                          )
+                          .toList();
+                    },
+                  ),
+                  // Icon(Icons.more_vert),
                   SizedBox(width: 10),
                   Icon(Icons.search),
                   SizedBox(width: 20.0),
                   Icon(Icons.picture_as_pdf_outlined),
-                  SizedBox(width: 200),
+                  SizedBox(width: 180),
                   Text('data'),
                   IconButton(
                     onPressed: () {
-                      home.scaffoldKey.currentState!.openEndDrawer();
+                      Scaffold.of(context).openEndDrawer();
                     },
                     icon: Icon(Icons.drag_handle_sharp),
                   ),
@@ -44,7 +63,8 @@ class Sliverappbar extends StatelessWidget {
         background: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text('كل ملاحضاتك'), Text('عدد الملاحظات')],
+
+            children: [Text('كل ملاحضاتك'), Text(' عدد الملاحظات}')],
           ),
         ),
         centerTitle: true,

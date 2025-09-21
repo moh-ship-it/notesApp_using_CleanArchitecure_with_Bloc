@@ -44,8 +44,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: AppThemes.light,
       darkTheme: AppThemes.dark,
+      debugShowCheckedModeBanner: false,
 
-      title: 'Flutter Demo',
+      title: 'Notes App',
       home: Home(),
       routes: {'addnote': (context) => AddNotePage()},
     );

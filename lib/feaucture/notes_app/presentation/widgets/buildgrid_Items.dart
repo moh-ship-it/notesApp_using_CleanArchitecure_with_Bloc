@@ -15,19 +15,17 @@ class BuildgridItems extends StatelessWidget {
     final date = DateTime.fromMillisecondsSinceEpoch(note.addTime ?? 0);
     // تنسيق التاريخ إلى نص مقروء
     final formattedDate = DateFormat('dd MMM, yyyy - hh:mm a').format(date);
-    // final noteBloc = BlocProvider.of<Blocs>(context);
-    // final v = BlocProvider.of<Blocs>(context).add(GetAllNotesEvent());
 
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).canvasColor,
+        // color: Colors.white,
         borderRadius: BorderRadius.circular(12.0),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3),
+            spreadRadius: 0.1,
+            blurRadius: 0,
+            offset: const Offset(0, 0),
           ),
         ],
       ),

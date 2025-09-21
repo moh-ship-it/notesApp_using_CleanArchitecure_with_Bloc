@@ -9,7 +9,7 @@ import '../widgets/sliverappbar.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<Blocs>(context).add(GetAllNotesEvent());
@@ -24,10 +24,115 @@ class Home extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
 
       // key: scaffoldKey,
-      endDrawer: Drawer(),
+      endDrawer: Padding(
+        padding: EdgeInsets.only(top: 40),
+        child: Drawer(
+          child: ListView(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.settings),
+                alignment: Alignment.topLeft,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    ListTile(
+                      title: Text('كل الملاحظات', textAlign: TextAlign.end),
+                      trailing: Icon(Icons.event_note),
+                    ),
+                    ListTile(
+                      title: Text(' المفضله', textAlign: TextAlign.end),
+                      trailing: Icon(Icons.star_outline_sharp),
+                    ),
+                    ListTile(
+                      title: Text(
+                        'الملاحظات التي تمت مشاركتها ',
+                        textAlign: TextAlign.end,
+                      ),
+                      trailing: Icon(Icons.people_outline),
+                    ),
+                    ListTile(
+                      title: Text(' سلة المحذوفات', textAlign: TextAlign.end),
+                      trailing: Icon(Icons.delete_forever_outlined),
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text(' المجلدات', textAlign: TextAlign.end),
+                      trailing: Icon(Icons.folder_outlined),
+                    ),
+                    Center(
+                      child: ElevatedButton(
+                        onPressed: () {},
+
+                        child: Text('ادارة المجلدات'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+
       body: CustomScrollView(
         slivers: [
           Sliverappbar(),
+          SliverToBoxAdapter(
+            child: Center(
+              child: Container(
+                width: 400,
+                height: 200,
+                padding: EdgeInsets.all(10),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  // color: Colors.red,
+                  elevation: 10,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Flexible(
+                        child: ListTile(
+                          title: Text(
+                            'للحصول على ملاحظاتك على اي جهاز ',
+                            textAlign: TextAlign.end,
+                          ),
+                          subtitle: Text(
+                            '''
+                              قم بالمزامنة معMecrosoft OneNote مشاهدتها في تطبيقات مثل Outlook  و OneNote على الويب
+                           ''',
+                            style: TextStyle(fontSize: 18),
+                            textAlign: TextAlign.end,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          OverflowBar(
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text(' جربة'),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text(' ليس الان'),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
           BlocBuilder<Blocs, BlocState>(
             builder: (context, state) {
               if (state is NoteLoading) {
