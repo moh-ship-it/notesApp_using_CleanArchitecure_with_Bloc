@@ -1,4 +1,4 @@
-import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/enitites/not_entity.dart';
+// import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/enitites/not_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,4 +1,4 @@
-import 'package:clean_architecture_using_bloc/core/resources/data_state.dart';
+// import /'package:clean_architecture_using_bloc/core/resources/data_state.dart';
 import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/enitites/not_entity.dart';
 
 abstract class NoteRepositore {

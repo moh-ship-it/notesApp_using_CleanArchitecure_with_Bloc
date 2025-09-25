@@ -3,14 +3,14 @@ import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/usecase
 import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/usecases/delete_note_usecase.dart';
 import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/usecases/get_notes_usescaase.dart';
 import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/usecases/update_note_usecase.dart';
-import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/bloc/bloc_state.dart';
+// import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/bloc/bloc_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/thems/app_thems.dart';
 import 'feaucture/notes_app/data/data_source/local/database_helper.dart';
 import 'feaucture/notes_app/presentation/bloc/bloc.dart';
-import 'feaucture/notes_app/presentation/pages/add_note.dart';
+// import 'feaucture/notes_app/presentation/pages/add_note.dart';
 import 'feaucture/notes_app/presentation/pages/add_note_page.dart';
 import 'feaucture/notes_app/presentation/pages/home.dart';
 

@@ -50,6 +50,10 @@ dependencies:
 
   build: ^4.0.0
 
+  flutter_native_splash: ^2.4.6
+  flutter_platform_alert: ^0.8.0
+  alert_dialog: ^1.0.2
+
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +70,9 @@ dev_dependencies:
   build_runner: ^2.8.0
   build_test: ^3.4.0
 
+flutter_native_splash:
+     background_image: "images/bak.jpg"
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -78,8 +85,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

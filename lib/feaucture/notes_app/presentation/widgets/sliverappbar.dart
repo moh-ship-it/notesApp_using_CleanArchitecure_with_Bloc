@@ -1,8 +1,8 @@
-import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/enitites/not_entity.dart';
+// import 'package:clean_architecture_using_bloc/feaucture/notes_app/domain/enitites/not_entity.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/contents/contents.dart';
-import '../pages/home.dart';
+// import '../pages/home.dart';
 
 class Sliverappbar extends StatelessWidget {
   Sliverappbar({super.key});

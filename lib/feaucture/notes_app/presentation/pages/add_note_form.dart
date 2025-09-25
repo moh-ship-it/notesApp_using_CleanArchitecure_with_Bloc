@@ -1,7 +1,7 @@
 // lib/feaucture/notes_app/presentation/widgets/add_note_form.dart
 
 import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/bloc/bloc.dart';
-import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/bloc/bloc_state.dart';
+// import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/bloc/bloc_state.dart';
 
 // import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/bloc/bloc_event.dart';
 import 'package:clean_architecture_using_bloc/feaucture/notes_app/presentation/cubit/add_note_cubit.dart';
